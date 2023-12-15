@@ -1,3 +1,7 @@
-Cluster,Number of Documents,Top Words,Num Nodes,Dimension,Diameter,Density,Cluster Coefficient,Top Words (Network)
-1,165,"and, of, to, with, in, no, the, for, is, a",6291,55897,7,0.0028251932821485963,0.2450311624388661,"PO, -, 1, MG, mg, QD, TABLET, take, patient, po, Tablet(s), :, 2, 1), Record, chest, date:, Dr., qd, pain, left, BID, x, normal, history, pain,, M.D., without, w/, 20, ,, well, right, 2., 3., 1., blood, 10, s/p, 3, disease, 40, 5, denies, last, per, pressure, BP, see, rate"
-2,185,"and, of, the, to, in, with, is, a, no, for",7304,70250,6,0.002633990832437089,0.28298245156200186,"mg, -, patient, PO, pain, chest, left, right, Dr., po, normal, 1, well, history, Record, 2, date:, without, blood, QD, L, M.D., also, MG, 5, qd, last, daily, denies, pressure, cardiac, 20, s/p, pain,, x, H, given, 10, per, evidence, pain., acute, today, w/, 1., disease, one, %, likely, artery"
+Cluster,Number of Documents,Num Nodes,Dimension,Diameter,Density,Cluster Coefficient
+1,51,3823,18673,10,0.002555930921836531,0.09915245200091982
+2,91,5767,43398,7,0.002610208031739668,0.1331454712670652
+3,74,4683,24673,7,0.00225059001251767,0.0807022417555524
+4,44,2606,9773,8,0.002879225999944024,0.07746662574101622
+5,70,4746,24059,8,0.0021367003304207815,0.07492263913052304
+6,20,3435,15329,9,0.0025990628859957664,0.09035337376579117
