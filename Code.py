@@ -345,22 +345,22 @@ def plot_histogram(clusters, output_dir):
             # Create subplots for each centrality measure
             plt.subplot(1, 3, i)
 
+            num_bins = 20
+            x_axis_range = (0, 0.5)
+
             for cluster_id, G in clusters.items():
                 # Load data for the cluster
                 cluster_data = pd.read_csv(os.path.join(output_dir, f'{centrality_measure}_centrality_cluster_{cluster_id}.csv'))
  
                 # Set a specific x-axis range for closeness centrality
                 if centrality_measure == 'closeness':
-                    x_axis_range = (0, 0.5) 
+                    x_axis_range = (0, 0.6) 
         
-                    # Adjust bins for closeness centrality
-                    num_bins = 20  
-                else:
-                    # The x-axis range and bins for degree and betweenness centrality
-                    x_axis_range = (0, 0.05) if centrality_measure == 'degree' else (0, 0.02)
-                    num_bins = 20 if centrality_measure != 'closeness' else 50  
-        
+
                 # Customize x-axis range for degree and betweenness centrality
+                if centrality_measure in ['degree', 'betweenness']:
+                    x_axis_range = (0, 0.3)
+
                 sns.histplot(data=cluster_data, x='Centrality', bins=num_bins, kde=True, label=f'Cluster {cluster_id}')
                 plt.xlim(x_axis_range)
 
@@ -368,6 +368,9 @@ def plot_histogram(clusters, output_dir):
             plt.xlabel(f'{centrality_measure.capitalize()} Centrality')
             plt.ylabel('Frequency')
             plt.legend()
+
+            # Set log scale on the y-axis
+            plt.yscale('log')
 
         # Adjust layout
         plt.tight_layout()
